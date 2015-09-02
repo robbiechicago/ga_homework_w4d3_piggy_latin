@@ -5,8 +5,13 @@
 </head>
 <body>
 <form action="/pigged" method="post">
-  <input type="text" name="word" autofocus>
+  <input type="text" name="pigword" autofocus>
   <button>Pig Me Now!</button>
+
+  <% if @result %>
+    <h2><%= @result %></h2>
+  <% end %>
+  
 </form>
 </body>
 </html>

@@ -1,7 +1,15 @@
-class Capitalise
+class Piggify
 
-  def self.cap word
-    word[0].upcase.concat word[1..word.length]
+  def self.oink pigword
+    if pigword.start_with?('a','e','i','o','u')
+      pigword.concat "ay"
+    else
+      pigword
+    end
+
+
+    
+
   end
 
 end

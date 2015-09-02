@@ -1,12 +1,13 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
-require_relative './models/capitalise'
+require_relative './models/piggyize'
 
 get '/' do
   @title = 'Home'
   erb :home
 end
 
-get '/:word' do
-  "#{ Piggify.oink params[:word] }"
+post '/pigged' do
+  "#{ Piggify.oink params[:pigword] }"
 end
+

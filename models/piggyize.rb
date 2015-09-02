@@ -4,12 +4,8 @@ class Piggify
     if pigword.start_with?('a','e','i','o','u')
       pigword.concat "ay"
     else
-      pigword
+      pigword[1..pigword.length].concat pigword[0].concat 'ay'
     end
-
-
-    
-
   end
 
 end
